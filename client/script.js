@@ -18,3 +18,16 @@ function loader(element) {
     }
   }, 3000)
 }
+
+function typeText(element, text) {
+  let index = 0;
+  
+  let interval = setInterval(() => {
+    if(index < text.length) {
+      element.innerHtml += text.charAt(index);
+      index++
+    } else {
+      clearInterval(interval)
+    }
+  }, 20)
+}
